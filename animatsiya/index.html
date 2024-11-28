@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Loader Animatsiyasi</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+      }
+
+      .loader {
+        display: flex;
+        gap: 10px;
+      }
+
+      .dot {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #3498db;
+        animation: bounce 0.5s infinite alternate;
+      }
+
+      .dot:nth-child(1) {
+        background-color: #3498db;
+        animation-delay: 0s;
+      }
+
+      .dot:nth-child(2) {
+        background-color: #2980b9;
+        animation-delay: 0.15s;
+      }
+
+      .dot:nth-child(3) {
+        background-color: #174891;
+        animation-delay: 0.3s;
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-20px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </body>
+</html>
